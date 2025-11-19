@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yarn Types Interactive Guide</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f0e4ff, #ffeef5);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+  text-align: left;
+  padding: 2rem 1rem 1rem 1rem;
+  background: #ffffff;
+  position: relative;
+  z-index: 5;
+}
+
+    h1 {
+      font-size: 3rem;
+      animation: float 4s ease-in-out infinite;
+      color: #7a3ea1;
+    }
+
+    @keyframes float {
+      0% {transform: translateY(0);} 
+      50% {transform: translateY(-12px);} 
+      100% {transform: translateY(0);} 
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      padding-bottom: 5rem;
+    }
+
+    .yarn-card {
+      background: #fff;
+      margin: 1.5rem 0;
+      padding: 1.5rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .yarn-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .yarn-card::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      right: -40%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, #f7d8ff, transparent 70%);
+      animation: spin 12s linear infinite;
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    @keyframes spin {
+      from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
+
+    h2 {
+      color: #6a2c8f;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    .animated-yarn {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      width: 120px;
+      animation: yarn-bounce 3s infinite ease-in-out;
+      opacity: 0.9;
+    }
+
+    @keyframes yarn-bounce {
+      0%, 100% {transform: translateY(0);} 
+      50% {transform: translateY(-18px);} 
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="position:absolute; top:10px; left:10px; display:flex; flex-direction:column; align-items:center;">
+    
+    <div id="yarn-tail" style="width:10px; background:#c27ae6; height:0; border-radius:5px; transition:height 0.2s;"></div>
+  </div>
+  <h1 style="margin-left:190px;">Yarn Types Interactive Guide</h1>
+</header>
+
+<div class="container">
+
+  <div class="yarn-card">
+    <h2>Cotton</h2>
+    <p><strong>From:</strong> Cotton plant fibers</p>
+    <p><strong>Texture:</strong> Soft, smooth, breathable</p>
+    <p><strong>Best For:</strong> Summer tops, baby clothes, dishcloths, bags, home décor</p>
+    <p><strong>Notes:</strong> Doesn't stretch much; great for warm climates.</p>
+  </div>
+
+  <div class="yarn-card">
+    <h2>Wool</h2>
+    <p><strong>From:</strong> Sheep fleece</p>
+    <p><strong>Texture:</strong> Warm, slightly stretchy; can be soft or coarse</p>
+    <p><strong>Best For:</strong> Sweaters, scarves, hats, gloves, winter items</p>
+    <p><strong>Notes:</strong> Holds heat well and keeps shape.</p>
+  </div>
+
+  <div class="yarn-card">
+    <h2>Bamboo</h2>
+    <p><strong>From:</strong> Processed bamboo pulp</p>
+    <p><strong>Texture:</strong> Silky, smooth, cool to the touch</p>
+    <p><strong>Best For:</strong> Summer garments, lightweight tops, baby clothing, shawls</p>
+    <p><strong>Notes:</strong> Naturally breathable and hypoallergenic.</p>
+  </div>
+
+  <div class="yarn-card">
+    <h2>Silk</h2>
+    <p><strong>From:</strong> Silkworm cocoons</p>
+    <p><strong>Texture:</strong> Extremely soft, shiny, luxurious</p>
+    <p><strong>Best For:</strong> Shawls, drapey tops, scarves, elegant accessories</p>
+    <p><strong>Notes:</strong> Strong fiber with excellent drape.</p>
+  </div>
+
+  <div class="yarn-card">
+    <h2>Acrylic</h2>
+    <p><strong>From:</strong> Synthetic (plastic-based fiber)</p>
+    <p><strong>Texture:</strong> Varies: soft to firm, smooth, lightweight</p>
+    <p><strong>Best For:</strong> Blankets, sweaters, everyday wear, beginner projects</p>
+    <p><strong>Notes:</strong> Affordable, easy to wash, many color options.</p>
+  </div>
+
+  <div class="yarn-card">
+    <h2>Mohair</h2>
+    <p><strong>From:</strong> Angora goat fleece</p>
+    <p><strong>Texture:</strong> Fluffy, light, fuzzy “halo”</p>
+    <p><strong>Best For:</strong> Sweaters, airy scarves, lace projects, mixed-yarn textures</p>
+    <p><strong>Notes:</strong> Very warm but lightweight.</p>
+  </div>
+
+  <div class="yarn-card">
+    <h2>Angora</h2>
+    <p><strong>From:</strong> Angora rabbit fur</p>
+    <p><strong>Texture:</strong> Extremely soft, plush, fuzzy</p>
+    <p><strong>Best For:</strong> Gloves, hats, scarves, luxury accessories</p>
+    <p><strong>Notes:</strong> Very warm; often blended due to delicacy.</p>
+  </div>
+
+  <div class="yarn-card">
+    <h2>Alpaca</h2>
+    <p><strong>From:</strong> Alpaca fleece (camelid family)</p>
+    <p><strong>Texture:</strong> Silky, soft, smooth, warmer than wool</p>
+    <p><strong>Best For:</strong> Sweaters, blankets, shawls, winter wear</p>
+    <p><strong>Notes:</strong> Hypoallergenic and durable.</p>
+  </div>
+
+</div>
+
+<div style="position: fixed; bottom: 40px; right: 40px; display:flex; flex-direction:column; align-items:center;">
+  <div id="yarn-tail" style="width:6px; background:#c27ae6; height:0; border-radius:3px; transition:0.2s;"></div>
+  <img class="animated-yarn" src="https://raw.githubusercontent.com/google/material-design-icons/master/src/image/svg/production/ic_texture_48px.svg" />
+</div>
+
+<script>
+window.addEventListener('scroll', () => {
+  const tail = document.querySelector('#yarn-tail');
+  let drop = window.scrollY;
+  tail.style.height = drop + 'px';
+});('scroll', () => {
+  const tail = document.querySelector('#yarn-tail');
+  let drop = window.scrollY * 0.7;
+  tail.style.height = drop + 'px';
+});
+</script>
+
+</body>
+</html>
